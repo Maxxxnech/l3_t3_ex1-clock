@@ -19,7 +19,7 @@ function ticker(targetId, number) {
       <Profiler
         id={"header_" + number}
         onRender={() =>
-          renderChecker("заголовка ", ".logHeader_" + number)
+          renderChecker("заголовка для " + number + "c", ".logHeader_" + number)
         }
       >
         <h2>{headerString}</h2>
@@ -28,7 +28,7 @@ function ticker(targetId, number) {
       <Profiler
         id={"time_" + number}
         onRender={() =>
-          renderChecker("циферблата " + number, ".logTime_" + number)
+          renderChecker("циферблата для " + number + "c", ".logTime_" + number)
         }
       >
         <div>{new Date().toLocaleTimeString()}</div>

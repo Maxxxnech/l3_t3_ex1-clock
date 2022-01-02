@@ -11,3 +11,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.dial{
+  margin: 50px;
+  border: 2px gray inset;
+  text-align: center;
+}

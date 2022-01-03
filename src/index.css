@@ -17,3 +17,7 @@ code {
   border: 2px gray inset;
   text-align: center;
 }
+
+.log_output{
+  text-align: left;
+}

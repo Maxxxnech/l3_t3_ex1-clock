@@ -3,9 +3,9 @@ import ReactDOM from "react-dom";
 import "./index.css";
 
 /**
- *
- * @param {String} type - React element
- * @param {String} tgt - onscreen log target
+ * Logs info about element render
+ * @param {String} type - name of checked React element
+ * @param {String} tgt - target for onscreen log output
  */
 function renderChecker(type, tgt, actualDuration, startTime) {
   var text =
@@ -24,9 +24,9 @@ function renderChecker(type, tgt, actualDuration, startTime) {
  * @param {Number} number - some unique  id, for ex.- clock update interval
  */
 function ticker(targetId, number) {
-  var headerString = "Текущее время, интервал " + number + "с";
+  var headerString = "Текущее время, интервал обновления - " + number + "с";
   const timeElement = (
-    <div className="dial">
+    <div className="main">
       <Profiler
         id={"header_" + number}
         onRender={(id, phase, actualDuration, baseDuration, startTime) =>
@@ -52,7 +52,7 @@ function ticker(targetId, number) {
           )
         }
       >
-        <div>{new Date().toLocaleTimeString()}</div>
+        <div className="dials">{new Date().toLocaleTimeString()}</div>
       </Profiler>
 
       <ul className="log_output">
